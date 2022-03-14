@@ -1,0 +1,516 @@
+@font-face {
+    font-family: Pacifico;
+    src: url('Pacifico.ttf');
+}
+
+/*GLOBAL STYLES*/
+:root {
+    --main-bg-color: #F1F2ED;
+    --main-tx-color: #000;
+    --secondary-text-color: #fff;
+    --seconday-bg-color: rgba(255, 255, 255, 0.5);
+    --color-one: #AFAFC7;
+    --seconday-color: #ffc145;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 1.9em;
+    color: #fff;
+}
+.logo{
+    font-family: 'Pacifico', sans-serif;
+    color: var(--main-bg-color);
+    font-size: 30px;
+    font-weight: 400;
+}
+body {
+    background: var(--main-bg-color);
+    margin: 0 auto !important;
+    font-family: 'Montserrat', Helvetica, Arial;
+    box-sizing: border-box;
+    color: var(--main-tx-color);
+}
+
+header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 3em;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   /*  background-color: var(--color-one); */
+}
+
+header nav {
+    float: right;
+    text-transform: uppercase;
+  /*   background: var(--color-one); */
+    font: bold 1.1em;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li a {
+    height: 4em;
+    line-height: 4em;
+    padding: 0 1.25em;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #fff;
+    background: var(--seconday-color);
+    transition: all .5s ease;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav-link {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+
+
+#main-title {
+    padding: 0;
+    /* position:relative; */
+   /*  background: transparent url("https://www.ceac.es/sites/default/files/2019-08/ceac-27-03-2019-reposteria.jpg") no-repeat;
+    */ /* opacity: 0.6; */
+    height: 810px;
+    /* top: 2.6em; */
+}
+
+#main-title img{
+    width: 98.5vw;
+}
+.alfondo{
+    z-index: -1;
+    position:absolute;/* 
+    background-position: center center; */
+	background-repeat: no-repeat;
+    filter: brightness(50%);
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+.main-message {
+    font-family: Pacifico;
+    padding-top: 5em;
+    font-weight: normal;
+    font-size: 3em;
+    color: #fff;
+    z-index: 3;
+}
+
+.primary-title{
+    font-family: Pacifico;
+    color: #000;
+    font-weight: lighter;
+}
+
+.secondary-message{
+    font-family: Pacifico;
+    font-weight: lighter;
+    color: var(--secondary-text-color);
+}
+
+.functioning {
+    width: 22%;
+    padding: 0.3em .01em;
+    margin: .5em 0 .5em 0;
+    height: fit-content;
+    font-size: 2em;
+    text-align: center;
+}
+
+.svg-inline--fa {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    color: var(--seconday-color);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#categories {
+    flex-direction: row;
+    justify-content: center;
+}
+#categories img{
+    width: 80%;
+    height: 50%;
+    padding: 7px 5px 0 5px;
+    margin: 5px 5px 0 5px;
+    border-radius: 25px;
+}
+
+.stats-container{
+    position:relative;
+/*     padding: 0 7px; */
+}
+.stats-container p{
+	padding:2px 0;
+    display: block;
+}
+.product_name{
+    float:center;
+    font-weight: bolder;
+    font-size: 23px;
+}
+.product_price{
+	float:center;
+    padding-right: 12px;
+	color:var(--seconday-color);
+	font-size:18px;
+	font-weight:600;
+}
+.meal-plan {
+    width: 25%;
+    padding: 0.3em auto;
+    margin: .5em auto;
+    width:335px;
+	height:550px;
+    border: var(--main-tx-color);
+    border: 1px solid #000;
+    border-radius: 2px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: var(--secondary-text-color);
+}
+
+.level {
+    font: bold 1.6em 'Montserrat';
+    text-transform: uppercase;
+    background: var(--color-one);
+    color: var(--secondary-text-color);
+    text-align: center;
+    height: 1em;
+    border-radius: 25px 25px 0 0;
+    padding: .5em 0;
+    line-height: 1em;
+}
+
+
+.btn {
+    padding: auto;
+    height: 2.2em;
+    width: auto;
+    font: bolder 1.2em 'Montserrat', Arial, Helvetica;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: var(--seconday-color);
+    cursor: pointer;
+    border: none;
+}
+
+ol {
+    margin-block-start: .5em;
+    margin-block-end: 1em;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+    padding-inline-start: 0;
+    line-height: 1.5em;
+}
+
+.video-benefits {
+    display: flex;
+    justify-content: center;
+}
+
+.video-benefits>iframe {
+    max-width: 40em;
+    width: 100%;
+}
+
+#info {
+    font-size: 2em;
+    text-align: center;
+    padding: 0 3em;
+}
+
+#contact-us>h1 {
+    margin-bottom: 0;
+}
+
+#contact-us {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#full-name,
+#email,
+#mobile {
+    max-width: 40em;
+    width: 26%;
+    height: 1.3em;
+    padding: .5em;
+    font: normal 1em 'Montserrat', Arial, Helvetica;
+    margin: 0 .4em;
+}
+
+#submit {
+    margin: .5em auto;
+}
+
+footer {
+    margin-top: 2em;
+    background-color: var(--color-one);
+    color: var(--secondary-text-color);
+    padding: .5em 2em;
+    margin-top: .4em;
+    display: block;
+    font: bold 1em 'Montserrat', Arial, Helvetica;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    padding: 0 1em;
+}
+
+footer a {
+    color: var(--secondary-text-color);
+}
+
+footer>p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*RESPONSIVE*/
+/* 
+@media (max-width: 699px) {
+
+    * {
+        font-size: 12px;
+    }
+
+    #whatsapp img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-right: .9em;
+        font-size: 1em;
+    }
+
+    .header {
+        padding: 0 1.25em;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: cal(100vh - 57px);
+        top: 3.75em;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    header nav ul li.active ul {
+        position: relative;
+        background: #333;
+    }
+
+    #header-img {
+        height: 4em;
+    }
+
+    .functioning {
+        width: 100%;
+        align-content: flex-start;
+    }
+
+    .functioning>p {
+        font-size: 1.4em;
+        padding: 0 .5em;
+    }
+
+    .svg-inline--fa {
+        font-size: 3em;
+    }
+
+    .meal-plan {
+        width: 93%;
+        margin-bottom: .8em !important;
+        min-height: 20em;
+    }
+
+    .video-benefits {
+        margin: 0 .9em .5em;
+    }
+
+
+    #info {
+        font-size: 1.2em;
+    }
+
+    #full-name,
+    #email,
+    #mobile {
+        width: 80%;
+        margin: .5em .7em;
+        font-size: 1.5em;
+    }
+
+} */
+ /*
+@media (min-width: 700px) and (max-width: 999px) {
+    * {
+        font-size: 15px;
+    }
+
+    #whatsapp img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-right: .9em;
+        font-size: 1em;
+    }
+
+    .header {
+        padding: 0 1.25em;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: cal(100vh - 57px);
+        background: #232323;
+        top: 3.75em;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    header nav ul li.active ul {
+        position: relative;
+        background: #333;
+    }
+
+    #header-img {
+        height: 4em;
+    }
+    .functioning {
+        width: 100%;
+        align-content: flex-start;
+    }
+
+    .functioning>p {
+        font-size: 1.4em;
+        padding: 0 .5em;
+    }
+
+    .svg-inline--fa {
+        font-size: 3em;
+    }
+
+    .meal-plan {
+        width: 93%;
+        margin-bottom: .8em !important;
+        min-height: 26em;
+    }
+
+    .plan-description{
+        font-size: 1.2em;
+    }
+
+    .price{
+        font-size: 1.5em;
+    }
+
+    .video-benefits {
+        margin: 0 .9em .5em;
+    }
+
+
+    #info {
+        font-size: 1.2em;
+    }
+
+    #full-name,
+    #email,
+    #mobile {
+        width: 80%;
+        margin: .5em .7em;
+        font-size: 1.5em;
+    }
+} */
