@@ -1,22 +1,30 @@
 @font-face {
     font-family: Pacifico;
-    src: url('Pacifico.ttf');
+    src: url("Pacifico.ttf");
 }
 
+
 /*GLOBAL STYLES*/
+
 :root {
-    --main-bg-color: #F1F2ED;
-    --main-tx-color: #000;
+    --main-bg-color: #f1f2ed;
+    --main-tx-color: #794134;
     --secondary-text-color: #fff;
-    --seconday-bg-color: rgba(255, 255, 255, 0.5);
-    --color-one: #AFAFC7;
+    --seconday-bg-color: #fcbb17;
+    --color-one: #afafc7;
     --seconday-color: #ffc145;
     margin: 0;
     padding: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
 
-h1,
+h1 {
+    align-self: flex-start;
+}
+
 h2,
 h3 {
     text-align: center;
@@ -30,43 +38,51 @@ h3 {
     font-size: 1.9em;
     color: #fff;
 }
-.logo{
-    font-family: 'Pacifico', sans-serif;
-    color: var(--main-bg-color);
-    font-size: 30px;
-    font-weight: 400;
+
+li {
+    list-style: none;
 }
+
+a {
+    text-decoration: none;
+}
+
 body {
     background: var(--main-bg-color);
-   /*  margin: 0 auto !important; */
-    font-family: 'Montserrat', Helvetica, Arial;
-   /*  box-sizing: content-box; */
+    font-family: "Montserrat", Helvetica, Arial;
     color: var(--main-tx-color);
 }
 
+
+/* NAVIGATION BAR STYLES */
+
 header {
-    position: static;
+    position: fixed;
+    /* para que el menú se mantenga fijado durante el scroll */
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 3em;
-    padding: 0 1em;
     display: flex;
     justify-content: space-around;
     align-items: center;
-   /*  background-color: var(--color-one); */
+    color: var(--seconday-bg-color);
+    background-color: var(--main-bg-color);
+    z-index: 2;
+}
+
+.logo {
+    font-family: "Pacifico", sans-serif;
+    color: var(--main-tx-color);
+    font-size: 30px;
+    font-weight: 400;
 }
 
 header nav {
     float: right;
-    text-transform: uppercase;
-  /*   background: var(--color-one); */
-    font: bold 1.1em;
+    font: bolder 1.1em;
 }
 
 header nav ul {
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
@@ -77,137 +93,420 @@ header nav ul li a {
     text-decoration: none;
     display: block;
     font-weight: bold;
-    color: #fff;
 }
 
 header nav ul li a:hover,
 header nav ul li a.active {
-    color: #fff;
+    color: var(--main-tx-color);
     background: var(--seconday-color);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 
-li {
-    list-style: none;
+button {
+    font: bolder 1em "Montserrat", Helvetica, Arial;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2em;
+    line-height: 4em;
+    width: 10em;
+    margin: 15px 15px;
+    border-radius: 5px;
+    border: 0px none transparent;
+    /* <line-width> || <line-style> || <color> */
 }
 
-a {
-    text-decoration: none;
+button:hover {
+    color: var(--main-tx-color);
+    background: var(--seconday-bg-color);
+    transition: all 0.5s ease;
+}
+
+.btn-primary {
+    background-color: var(--seconday-bg-color);
+    color: var(--main-bg-color);
+    border: 0px none transparent;
+    /* <line-width> || <line-style> || <color> */
+}
+
+.login {
+    border: 2px solid var(--main-tx-color);
+    /* <line-width> || <line-style> || <color> */
 }
 
 #nav-link {
-    color: var(--secondary-text-color);
+    color: var(--main-tx-color);
     text-decoration: none;
 }
 
-
-
 #main-title {
-    padding: 0;
-    /* position:relative; */
-   /*  background: transparent url("https://www.ceac.es/sites/default/files/2019-08/ceac-27-03-2019-reposteria.jpg") no-repeat;
-    */ /* opacity: 0.6; */
-    height: 810px;
-    /* top: 2.6em; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 620px;
+    background-color: var(--seconday-bg-color);
+    /*padding: 0px;
+    margin: 0px;
+    background-color: var(--seconday-bg-color);
+    height: 82vh;*/
 }
 
-#main-title img{
-    width: 98.5vw;
-}
-.alfondo{
-    z-index: -1;
-    position:absolute;/* 
-    background-position: center center; */
-	background-repeat: no-repeat;
-    filter: brightness(50%);
-    box-sizing: border-box;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-}
 .main-message {
+    text-align: center;
     font-family: Pacifico;
-    padding-top: 5em;
+    padding: 50px;
     font-weight: normal;
     font-size: 3em;
-    color: #fff;
-    z-index: 3;
+    color: var(--main-tx-color);
 }
 
-.primary-title{
+.primary-title {
+    margin: 0.5em;
+    padding: 0;
+    line-height: 0.2em;
     font-family: Pacifico;
-    color: #000;
-    font-weight: lighter;
-}
-
-.secondary-message{
-    font-family: Pacifico;
-    font-weight: lighter;
+    font-weight: 100;
     color: var(--secondary-text-color);
+    background-color: var(--main-tx-color);
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* Esto es para el lazo que enmarca los títulos */
+
+.ribbon {
+    border-width: 2px 0;
+    position: relative;
+    display: block;
+    padding: 0.75em 0 0.75em 0.5em;
+    color: var(--main-bg-color);
+    background-color: var(--main-tx-color);
+}
+
+.ribbon:before {
+    content: "";
+    display: inline-block;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    position: absolute;
+    top: -50%;
+    bottom: 50%;
+    left: 1.6em;
+    right: 0;
+    background-color: var(--main-bg-color);
+}
+
+.ribbon:after {
+    content: "";
+    display: inline-block;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    position: absolute;
+    top: -50%;
+    bottom: 50%;
+    left: 0;
+    right: 1.6em;
+    background-color: var(--main-bg-color);
+    flex-shrink: 1
+}
+
+.secondary-message {
+    text-align: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #000;
 }
 
 .functioning {
     width: 22%;
-    padding: 0.3em .01em;
-    margin: .5em 0 .5em 0;
+    padding: 0.3em 0.01em;
+    margin: 0.5em 0 0.5em 0;
     height: fit-content;
-    font-size: 2em;
     text-align: center;
 }
 
-.svg-inline--fa {
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
-    color: var(--seconday-color);
+.smallTitle {
+    font: bold 1.2em 'Montserrat', Arial, Helvetica;
+    color: var(--main-tx-color);
 }
+
+.smallDescription {
+    font: 'Montserrat', Arial, Helvetica;
+}
+
+#how-it-works button {
+    display: block;
+    width: 25em;
+    height: 3em;
+    margin: 5px auto;
+    line-height: normal;
+}
+
+
+/* TARJETAS DE LA TIENDA */
 
 .container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+#card-product {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    padding: 0 auto;
+    margin: 0 auto;
+    height: fit-content;
+}
+
 #categories {
-    flex-direction: row;
     justify-content: center;
 }
-#categories img{
+
+#categories img {
     width: 80%;
-    height: 50%;
+    height: 40%;
     padding: 7px 5px 0 5px;
     margin: 5px 5px 0 5px;
     border-radius: 25px;
 }
 
-.stats-container{
-    position:relative;
-/*     padding: 0 7px; */
+.container-card {
+    width: 200px;
+    height: 300px;
+    margin: 30px auto;
 }
-.stats-container p{
-	padding:2px 0;
+
+.card {
+    border-radius: 25px;
+    box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-head {
+    position: relative;
+    background: var(--seconday-bg-color);
+    border-radius: 25px 25px 0 0;
+    width: 18em;
+    max-height: 15em;
+}
+
+.product-img {
+    max-height: 12em;
+    width: auto;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+.product-detail {
+    padding: 0 auto;
+    font-size: 12px;
+    color: var(--main-tx-color);
+}
+
+.product-detail h2 {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card-body {
+    height: 200px;
+    width: 18em;
+    background: #fff;
+    border-radius: 0 0 25px 25px;
+}
+
+.product-title {
+    padding: 20px 20px 5px 20px;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-title b {
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+
+.badge {
+    position: relative;
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    background: #12be4e;
+    padding: 2px 5px;
+    border-radius: 4px;
+    top: -20px;
+    margin-left: 19em;
+}
+
+.product-description {
+    padding: 2px 20px;
+}
+
+.product-caption {
+    display: block;
+    padding: 15px 20px 0 20px;
+    font-size: .8em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.product-rating {
+    padding: 0 20px;
+    margin: 0%;
+    font-size: 11px;
+}
+
+.product-rating i.grey {
+    color: #acacab;
+}
+
+.product-size h4 {
+    font-size: .85em;
+    font-weight: bolder;
+    padding: 0 21px;
+    margin-top: 7px;
+    text-transform: uppercase;
+}
+
+.ul-size {
+    margin-left: 15px;
+}
+
+.ul-size li {
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+}
+
+.ul-size li a {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 11px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 23px;
+    color: var(--main-tx-color);
+}
+
+.ul-size li a.active {
+    background: #f35e3d;
+    color: #fff;
+}
+
+.product-size:before,
+.product-size:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.product-color h4 {
+    font-size: 11px;
+    padding: 0 21px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.ul-color {
+    margin-left: 27px;
+}
+
+.ul-color li {
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+}
+
+.ul-color li a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+}
+
+.product-price {
+    position: absolute;
+    background: #11e95b;
+    padding: 2px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--main-bg-color);
+    border-radius: 7px;
+    margin-top: -1px;
+    margin-left: -5px;
+    box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+}
+
+.product-price b {
+    margin-left: 5px;
+}
+
+.stats-container {
+    position: relative;
+    /*     padding: 0 7px; */
+}
+
+.stats-container p {
+    padding: 2px 0;
     display: block;
 }
-.product_name{
-    float:center;
+
+.product_name {
+    float: center;
     font-weight: bolder;
     font-size: 23px;
 }
-.product_price{
-	float:center;
+
+.product_price {
+    float: center;
     padding-right: 12px;
-	color:var(--seconday-color);
-	font-size:18px;
-	font-weight:600;
+    color: var(--seconday-color);
+    font-size: 18px;
+    font-weight: 600;
 }
+
 .meal-plan {
     width: 25%;
     padding: 0.3em auto;
-    margin: .5em auto;
-    width:335px;
-	height:550px;
+    margin: 0.5em auto;
+    width: 335px;
+    height: 550px;
     border: var(--main-tx-color);
     border: 1px solid #000;
     border-radius: 2px;
@@ -218,23 +517,22 @@ a {
 }
 
 .level {
-    font: bold 1.6em 'Montserrat';
+    font: bold 1.6em "Montserrat";
     text-transform: uppercase;
     background: var(--color-one);
     color: var(--secondary-text-color);
     text-align: center;
     height: 1em;
     border-radius: 25px 25px 0 0;
-    padding: .5em 0;
+    padding: 0.5em 0;
     line-height: 1em;
 }
-
 
 .btn {
     padding: auto;
     height: 2.2em;
     width: auto;
-    font: bolder 1.2em 'Montserrat', Arial, Helvetica;
+    font: bolder 1.2em "Montserrat", Arial, Helvetica;
     text-transform: uppercase;
     border-radius: 5px;
     background: var(--seconday-color);
@@ -243,7 +541,7 @@ a {
 }
 
 ol {
-    margin-block-start: .5em;
+    margin-block-start: 0.5em;
     margin-block-end: 1em;
     margin-inline-start: 1em;
     margin-inline-end: 1em;
@@ -286,23 +584,23 @@ ol {
     max-width: 40em;
     width: 26%;
     height: 1.3em;
-    padding: .5em;
-    font: normal 1em 'Montserrat', Arial, Helvetica;
-    margin: 0 .4em;
+    padding: 0.5em;
+    font: normal 1em "Montserrat", Arial, Helvetica;
+    margin: 0 0.4em;
 }
 
 #submit {
-    margin: .5em auto;
+    margin: 0.5em auto;
 }
 
 footer {
     margin-top: 2em;
     background-color: var(--color-one);
     color: var(--secondary-text-color);
-    padding: .5em 2em;
-    margin-top: .4em;
+    padding: 0.5em 2em;
+    margin-top: 0.4em;
     display: block;
-    font: bold 1em 'Montserrat', Arial, Helvetica;
+    font: bold 1em "Montserrat", Arial, Helvetica;
 }
 
 footer ul {
@@ -325,7 +623,10 @@ footer>p {
     font-weight: normal;
 }
 
+
 /*RESPONSIVE*/
+
+
 /* 
 @media (max-width: 699px) {
 
@@ -417,7 +718,9 @@ footer>p {
     }
 
 } */
- /*
+
+
+/*
 @media (min-width: 700px) and (max-width: 999px) {
     * {
         font-size: 15px;
