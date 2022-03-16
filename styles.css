@@ -13,12 +13,16 @@
     --seconday-bg-color: #fcbb17;
     --color-one: #afafc7;
     --seconday-color: #ffc145;
-    margin: 0;
-    padding: 0;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h9 {
+    text-align: left;
 }
 
 h1 {
@@ -125,7 +129,8 @@ button:hover {
 .btn-primary {
     background-color: var(--seconday-bg-color);
     color: var(--main-bg-color);
-    border: 0px none transparent;
+    border: 0px solid var(--seconday-color);
+    box-shadow: -10px 20px 15px -10px rgba(255, 251, 8, 0.3);
     /* <line-width> || <line-style> || <color> */
 }
 
@@ -151,7 +156,7 @@ button:hover {
 .main-message {
     text-align: center;
     font-family: Pacifico;
-    padding: 50px;
+    padding-top: 100px;
     font-weight: normal;
     font-size: 3em;
     color: var(--main-tx-color);
@@ -167,6 +172,13 @@ button:hover {
     background-color: var(--main-tx-color);
     text-align: center;
     overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
@@ -225,7 +237,8 @@ button:hover {
     left: 0;
     right: 1.6em;
     background-color: var(--main-bg-color);
-    flex-shrink: 1
+    flex-shrink: 1;
+    padding-right: 10%;
 }
 
 .secondary-message {
@@ -248,10 +261,6 @@ button:hover {
     color: var(--main-tx-color);
 }
 
-.smallDescription {
-    font: 'Montserrat', Arial, Helvetica;
-}
-
 #how-it-works button {
     display: block;
     width: 25em;
@@ -261,200 +270,55 @@ button:hover {
 }
 
 
-/* TARJETAS DE LA TIENDA */
-
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0;
-}
-
-#card-product {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-    padding: 0 auto;
-    margin: 0 auto;
-    height: fit-content;
-}
+/* Nuevo estilo tarjeta de la tienda*/
 
 #categories {
     justify-content: center;
+    max-height: 480px;
+    margin: 10px 0 20px 0;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bg-header {
+    background: linear-gradient(151deg, rgba(247, 119, 48, 1) 0%, rgba(252, 187, 23, 1) 85%);
+    border-radius: 20px 20px 0 0;
+}
+
+.header-card {
+    border-radius: 8px 8px 0 0;
+    max-height: 200px;
+    height: 220px;
+    width: 100%;
+}
+
+.tarjeta {
+    max-width: 350px;
+    max-height: 420px;
+    background: var(--main-bg-color);
+    border-radius: 20px;
+    margin: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#categories h2 {
+    padding: 0 0 15px 0;
 }
 
 #categories img {
     width: 80%;
     height: 40%;
-    padding: 7px 5px 0 5px;
+    padding: 7px 5px 0 50px;
     margin: 5px 5px 0 5px;
     border-radius: 25px;
 }
 
-.container-card {
-    width: 200px;
-    height: 300px;
-    margin: 1em auto;
-}
-
-.card {
-    border-radius: 25px;
-    box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
-    margin: 0 -5em;
-}
-
-.card-head {
-    position: relative;
-    background: var(--seconday-bg-color);
-    border-radius: 25px 25px 0 0;
-    width: 18em;
-    max-height: 15em;
-}
-
-.product-img {
-    max-height: 12em;
-    width: auto;
-    padding: 0 auto;
-    margin: 0 auto;
-}
-
-.product-detail {
-    padding: 0 auto;
-    font-size: 12px;
-    color: var(--main-tx-color);
-}
-
-.product-detail h2 {
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.card-body {
-    height: 200px;
-    width: 18em;
-    background: #fff;
-    border-radius: 0 0 25px 25px;
-}
-
-.product-title {
-    padding: 20px 20px 5px 20px;
-    display: block;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.product-title b {
-    font-weight: 900;
-    letter-spacing: 0px;
-}
-
-.badge {
-    position: relative;
-    font-size: 10px;
-    font-weight: 300;
-    color: #fff;
-    background: #12be4e;
-    padding: 2px 5px;
-    border-radius: 4px;
-    top: -20px;
-    margin-left: 19em;
-}
-
 .product-description {
-    padding: 2px 20px;
-}
-
-.product-caption {
-    display: block;
-    padding: 15px 20px 0 20px;
-    font-size: .8em;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.product-rating {
-    padding: 0 20px;
-    margin: 0%;
-    font-size: 11px;
-}
-
-.product-rating i.grey {
-    color: #acacab;
-}
-
-.product-size h4 {
-    font-size: .85em;
-    font-weight: bolder;
-    padding: 0 21px;
-    margin-top: 7px;
-    text-transform: uppercase;
-}
-
-.ul-size {
-    margin-left: 15px;
-}
-
-.ul-size li {
-    list-style: none;
-    float: left;
-    margin-right: 20px;
-}
-
-.ul-size li a {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 11px;
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 23px;
-    color: var(--main-tx-color);
-}
-
-.ul-size li a.active {
-    background: #f35e3d;
-    color: #fff;
-}
-
-.product-size:before,
-.product-size:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.product-color h4 {
-    font-size: 11px;
-    padding: 0 21px;
-    margin-top: 20px;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-}
-
-.ul-color {
-    margin-left: 27px;
-}
-
-.ul-color li {
-    list-style: none;
-    float: left;
-    margin-right: 20px;
-}
-
-.ul-color li a {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
+    padding: 20px 20px;
 }
 
 .product-price {
@@ -467,46 +331,54 @@ button:hover {
     font-weight: 200;
     color: var(--main-bg-color);
     border-radius: 7px;
-    margin-top: -1px;
-    margin-left: -5px;
+    margin-top: 5px;
+    margin-left: 10px;
     box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
 }
 
-.product-price b {
-    margin-left: 5px;
+.footer-card {
+    padding: 0 1rem;
+    height: 8em;
 }
 
-.stats-container {
-    position: relative;
-    /*     padding: 0 7px; */
+.footer-card button {
+    float: right;
+    margin-top: 5px;
+    height: 2em;
 }
 
-.stats-container p {
-    padding: 2px 0;
-    display: block;
+.btn-see-more {
+    width: 480px;
+    height: 3em;
+    font-size: 1em;
 }
 
-.product_name {
-    float: center;
-    font-weight: bolder;
-    font-size: 23px;
-}
 
-.product_price {
-    float: center;
-    padding-right: 12px;
-    color: var(--seconday-color);
-    font-size: 18px;
-    font-weight: 600;
-}
+/* HASTA AQUÍ ESTILOS DE LAS TARJETAS DE LA TIENDA */
+
+
+/* BENEFICIOS */
 
 #beneficios {
-    height: fit-content;
-    margin: 12em 0 0 0;
+    justify-content: space-around;
+    max-height: 600px;
+    margin-top: 150px;
+}
+
+#beneficios h1 {
+    width: 70vw;
+    text-align: center;
+    margin: auto;
+}
+
+#beneficios div {
+    margin: 1.5em;
+    padding: 25px 0;
 }
 
 .left,
 .right {
+    margin: 1%;
     width: 40%;
 }
 
@@ -520,6 +392,25 @@ button:hover {
     height: 2em;
     padding: 20px;
 }
+
+
+/* 
+#beneficios {
+    height: fit-content;
+    margin: 12em 0 0 0;
+    display: flexbox;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+ */
+
+
+/* HASTA AQUI La seccion de beneficios */
 
 .opinions {
     background-color: var(--seconday-bg-color);
@@ -679,9 +570,10 @@ footer>p {
         width: 100%;
         align-content: flex-start;
     }
-    .functioning>p {
-        font-size: 1.4em;
+    .functioning p {
+        font-size: 1.1em;
         padding: 0 .5em;
+        font-weight: 500;
     }
     .svg-inline--fa {
         font-size: 2.5em;
@@ -703,20 +595,93 @@ footer>p {
         font-size: 15px;
     }
     .primary-title {
-        font-size: 2.5em;
+        font-size: 2.2em;
         font-weight: 200;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
     .smallTitle {
-        font-size: 2em;
-        margin: 0 .3em;
+        font-size: 1.5em;
+        margin: .9em .3em;
     }
     #how-it-works button {
-        font-size: 1.5em;
-        padding: 20px;
+        font-size: 1.1em;
+        padding: 2px 18px;
         width: fit-content;
+        margin-bottom: 3em;
     }
     #categories {
         margin: 10px;
+        max-height: fit-content;
+    }
+    #categories h2 {
+        font-size: 30px;
+    }
+    .product-description {
+        font-size: 18px;
+    }
+    #categories b {
+        font-size: 20px;
+    }
+    #categories button {
+        font-size: 15px;
+    }
+    #beneficios {
+        margin: 10px 0;
+        max-height: fit-content;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    #beneficios h1,
+    #feedback h1 {
+        overflow-wrap: break-word;
+        width: auto;
+        font-size: 1.8em;
+    }
+    #beneficios div {
+        padding: 0;
+        margin: 10px;
+        justify-content: center;
+    }
+    .left,
+    .right {
+        width: 450px;
+        margin-top: 0;
+        padding: 7px 12px;
+    }
+    #beneficios button {
+        margin: 18px auto;
+    }
+    .smallDescription {
+        line-height: 20px;
+        margin-top: 9px;
+        text-align: center;
+    }
+    .subscribe-title {
+        margin-top: 15px;
+        font-size: 2em;
+    }
+    .subscribe-copy {
+        line-height: 20px;
+    }
+    .form-email {
+        margin: 12px 0;
+        padding: 7px;
+        border-radius: 5px;
+        height: 30px;
+        border: 1px solid var(--color-one);
+        width: 200px;
+        font-size: 12px;
+    }
+    .btn-form {
+        width: 200px;
+        padding: 0 8px;
+        font-size: 15px;
+        margin: auto;
+        height: 2.3em;
+    }
+    .notice {
+        padding: 0 20px;
     }
 }
 
