@@ -528,7 +528,10 @@ footer>p {
 
 /*RESPONSIVE*/
 
-@media (max-width: 480px) {
+
+/* estilos para movil en vertical */
+
+@media (max-width: 479px) and ( orientation: portrait) {
     * {
         font-size: 12px;
         box-sizing: border-box;
@@ -684,6 +687,8 @@ footer>p {
         padding: 0 20px;
     }
 }
+
+@media (min-width: 480px) and (max-width: 999px) and ( orientation: portrait) {}
 
 
 /*
