@@ -21,9 +21,10 @@
     padding: 0;
 }
 
-h9 {
+
+/* h9 {
     text-align: left;
-}
+} */
 
 h1 {
     align-self: flex-start;
@@ -154,11 +155,13 @@ button:hover {
 }
 
 .main-message {
-    text-align: center;
-    font-family: Pacifico;
+    text-align: left;
+    font-family: "Pacifico", Arial, Helvetica, sans-serif;
     padding-top: 100px;
+    padding-bottom: 30px;
+    padding-left: 50px;
     font-weight: normal;
-    font-size: 3em;
+    font-size: 3.5em;
     color: var(--main-tx-color);
 }
 
@@ -173,6 +176,58 @@ button:hover {
     text-align: center;
     overflow: hidden;
 }
+
+
+/* AQUI COMIENZAN LOS ESTILOS PARA EL SLIDESHOW */
+
+.slidershow-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-contenedor {
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider {
+    width: 100%;
+    height: 610px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.secondary-message {
+    text-align: justify;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #000;
+    padding: 0 75px 25px 50px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.btn-slider {
+    background-color: var(--main-tx-color);
+    color: var(--main-bg-color);
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    margin: 15px;
+    margin-left: 50px;
+}
+
+.btn-slider:hover {
+    background-color: #522b22;
+    padding: 14px;
+    font-size: 20px;
+    color: var(--main-bg-color);
+}
+
+
+/* AQUI FINALIZAN LOS ESTILOS PARA EL SLIDESHOW */
 
 .container {
     display: flex;
@@ -241,17 +296,10 @@ button:hover {
     padding-right: 10%;
 }
 
-.secondary-message {
-    text-align: center;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    color: #000;
-}
-
 .functioning {
     width: 22%;
     padding: 0.3em 0.01em;
-    margin: 0.5em 0 0.5em 0;
+    margin: 0.5em 2em;
     height: fit-content;
     text-align: center;
 }
@@ -361,7 +409,7 @@ button:hover {
 
 #beneficios {
     justify-content: space-around;
-    max-height: 600px;
+    max-height: 900px;
     margin-top: 150px;
 }
 
@@ -427,6 +475,9 @@ button:hover {
     margin: 1em auto;
 }
 
+
+/* SECCIÓN DE NEWSLETTER */
+
 #contact-us {
     margin: 2em auto;
     text-align: center;
@@ -460,6 +511,7 @@ button:hover {
     max-width: 70em;
     text-align: center;
     line-height: 1;
+    margin-top: .8em;
 }
 
 .form {
@@ -468,6 +520,7 @@ button:hover {
 
 .form-email {
     padding: 7px 25px;
+    margin-top: 1em;
     border-radius: 5px;
     height: 50px;
     border: 1px solid var(--color-one);
@@ -494,6 +547,9 @@ button:hover {
 .notice {
     width: 70em;
 }
+
+
+/* AQUÍ COMIENZA EL FOOTER */
 
 footer {
     margin-top: 2em;
