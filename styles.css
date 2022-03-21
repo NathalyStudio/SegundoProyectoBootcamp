@@ -27,7 +27,9 @@
 } */
 
 h1 {
-    align-self: flex-start;
+    align-self: center;
+    margin: 0;
+    padding: 0;
 }
 
 h2,
@@ -642,26 +644,46 @@ footer>p {
         margin: .5em auto 0 auto;
         height: fit-content;
     }
-    #main-title img {
-        max-width: 90vw;
-        margin: 1em auto;
-    }
     .main-message {
-        margin: 2em auto 0 auto;
+        margin: 0 auto;
+        padding-top: 5px;
+        font-size: 3em;
+        line-height: 27px;
     }
     .secondary-message {
-        margin: 1em auto 0 auto;
+        margin: 0 auto;
         font-size: 15px;
+        padding: 0 15px 0 15px;
+    }
+    .contenido-slider {
+        /*         width: auto; */
+        flex-direction: column-reverse;
+        height: 540px;
+    }
+    #main-title img {
+        max-width: 80vw;
+        max-height: 50vh;
+        margin: 50px 0 0 0;
+        padding: 0;
+    }
+    .btn-slider {
+        width: 15em;
+        padding: 5px;
+        height: 3em;
+        margin: 1em auto;
     }
     .primary-title {
-        font-size: 2.2em;
+        font-size: 1.85em;
         font-weight: 200;
         margin-top: 10px;
         margin-bottom: 20px;
+        width: 270px;
+        margin-left: 0;
+        /*  padding: 20px 0; */
     }
     .smallTitle {
         font-size: 1.5em;
-        margin: .9em .3em;
+        text-align: center;
     }
     #how-it-works button {
         font-size: 1.1em;
@@ -674,10 +696,25 @@ footer>p {
         max-height: fit-content;
     }
     #categories h2 {
-        font-size: 30px;
+        font-size: 20px;
     }
     .product-description {
-        font-size: 18px;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .product-price {
+        font-size: 15px;
+        padding: 1px 5px;
+        margin-left: 0;
+    }
+    .footer-card button {
+        font-size: 13px !important;
+        margin-right: 0;
+    }
+    .btn-see-more {
+        width: 17em;
+        height: 2.2em;
+        font-size: 1em;
     }
     #categories b {
         font-size: 20px;
@@ -695,7 +732,7 @@ footer>p {
     #feedback h1 {
         overflow-wrap: break-word;
         width: auto;
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     #beneficios div {
         padding: 0;
@@ -711,13 +748,22 @@ footer>p {
     #beneficios button {
         margin: 18px auto;
     }
+    #beneficios img {
+        max-width: 250px;
+    }
     .smallDescription {
         line-height: 20px;
         margin-top: 9px;
         text-align: center;
     }
+    #contact-us {
+        margin: 10px auto;
+        max-width: 80vw;
+    }
+    .subscribe {
+        max-height: 350px;
+    }
     .subscribe-title {
-        margin-top: 15px;
         font-size: 2em;
     }
     .subscribe-copy {
@@ -740,7 +786,18 @@ footer>p {
         height: 2.3em;
     }
     .notice {
-        padding: 0 20px;
+        padding: 10px 20px;
+        width: 20em;
+    }
+    .opinions {
+        padding: 1em 2em;
+    }
+    footer {
+        display: flexbox;
+        position: relative;
+    }
+    footer ul li {
+        max-width: fit-content;
     }
 }
 
